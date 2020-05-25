@@ -2,8 +2,10 @@
 -export([area/1, area/3]).
 
 
-area({Shape, X, Y}) ->  area(Shape, X, Y).
 
+%%%%%%%%%%  Etude 3-1 to 3-4  %%%%%%%%%%
+
+area({Shape, X, Y}) ->  area(Shape, X, Y).
 
 area(rectangle,X,Y) when X>= 0, Y >= 0 -> 
     X * Y;
