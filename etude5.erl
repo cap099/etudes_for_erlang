@@ -4,6 +4,7 @@
 -export([char_to_shape/1, get_number/1, get_dimensions/2, area/0, date_parts/1]).
 
 
+%%%%%%%%%%  Etude 5-1  %%%%%%%%%%
 
 
 area() ->
@@ -53,6 +54,7 @@ area(ellipse, X, Y) when X >= 0, Y >= 0 ->
 area(_, _, _) -> 
     unknown.
 
+%%%%%%%%%%  Etude 5-2  %%%%%%%%%%
 
 
 date_parts(Date) ->

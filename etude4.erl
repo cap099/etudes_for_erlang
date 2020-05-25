@@ -2,6 +2,8 @@
 
 -export([area/3, gcd/2, raise/2, raise_tail/2, raise/3, nth_root/2, nth_root/3]).
 
+%%%%%%%%%%  Etude 4-1  %%%%%%%%%%
+
 %find area using case...of statement
 area(Shape, X, Y) ->
     case Shape of
@@ -15,6 +17,7 @@ area(Shape, X, Y) ->
             'unknown shape'
     end.
 
+%%%%%%%%%%  Etude 4-2  %%%%%%%%%%
 
 %greatest common divisor
 gcd(M,N) when M >=0, N >=0 ->
@@ -23,6 +26,7 @@ gcd(M,N) when M >=0, N >=0 ->
        M < N -> gcd(M, N - M)
     end. 
 
+%%%%%%%%%%  Etude 4-3  %%%%%%%%%%
 
 %exponentiation
 raise(X,N) ->
@@ -32,6 +36,7 @@ raise(X,N) ->
         N  < 0 -> 1 / raise(X,-N)
     end.
 
+%%%%%%%%%%  Etude 4-4  %%%%%%%%%%
 
 %tail recursive exponentiation
 
@@ -47,6 +52,7 @@ raise(X,N,Acc) ->
     end.
 
 
+%%%%%%%%%%  Etude 4-5  %%%%%%%%%%
 
 %find Nth root of X
 nth_root(X, N) -> nth_root(X, N, X/2).
