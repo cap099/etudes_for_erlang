@@ -4,7 +4,9 @@
 
 %%%%%%%%%%  Etude 4-1  %%%%%%%%%%
 
-%find area using case...of statement
+%% Update function from chapter 3 to use a 'case of' statement
+
+-spec(area(atom(), number(), number()) -> number()).
 area(Shape, X, Y) ->
     case Shape of
         rectangle when X >= 0 , Y >= 0 ->
@@ -19,7 +21,9 @@ area(Shape, X, Y) ->
 
 %%%%%%%%%%  Etude 4-2  %%%%%%%%%%
 
-%greatest common divisor
+%% Recursive function to find Greatest Common Divisor of two integers
+
+-spec(gcd(number(), number()) -> number()).
 gcd(M,N) when M >=0, N >=0 ->
     if M =:= N -> M;
        M > N -> gcd(M-N, N);
@@ -28,7 +32,9 @@ gcd(M,N) when M >=0, N >=0 ->
 
 %%%%%%%%%%  Etude 4-3  %%%%%%%%%%
 
-%exponentiation
+%% Recursive function to find X to the N power
+
+-spec(raise(number(), integer()) -> number()).
 raise(X,N) ->
     if  N =:= 0 -> 1;
         N =:= 1 -> X;
@@ -38,8 +44,9 @@ raise(X,N) ->
 
 %%%%%%%%%%  Etude 4-4  %%%%%%%%%%
 
-%tail recursive exponentiation
+%% Tail recursive function to find X to the N power
 
+-spec(raise_tail(number(), integer()) -> number() ).
 raise_tail(X,N) ->
     if  N =:= 0 -> 1;
         N < 0 -> 1 / raise(X,-N);
@@ -54,7 +61,9 @@ raise(X,N,Acc) ->
 
 %%%%%%%%%%  Etude 4-5  %%%%%%%%%%
 
-%find Nth root of X
+%% Recursive Function to find Nth root of X
+
+-spec(nth_root(number(), integer()) -> number()).
 nth_root(X, N) -> nth_root(X, N, X/2).
 
 nth_root(X, N, A) ->
