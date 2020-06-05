@@ -1,0 +1,1 @@
+this directory contains select excercises from 'Learn You Some Erlang For Great Good!'
